@@ -71,8 +71,8 @@ class CDataset(Dataset):  # ChatDataset
 
 
 #hyperparameters
-batch_size=8;
-ds=CDataset()
+batch_size=8
+dataset=CDataset()
 
 inps= len(aTrain[0])# input size --> len of each BOG we creater --> it has the same len as the all word array
 hids=8 #hidden size
@@ -83,9 +83,11 @@ print(inps)
 # number of workers =2 --> it is for multiprocessing so that it works faster
 
 
-train_loader=DataLoader(dataset=ds, batch_size=8, shuffle=True , num_workers=0)
+train_loader=DataLoader(dataset=dataset, batch_size=8, shuffle=True , num_workers=0)
+
+
 # num_workers sometimes throws an error in windows so if that is the case just set it to 0
 # We can automatically iterate over it and can get a batch training
 
 # now let go for the training look for the Training.
-model= NeuralNetwork(inps,hids,outs)
+#model= NeuralNetwork(inps,hids,outs)
