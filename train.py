@@ -97,7 +97,7 @@ nlpModel= NeuralNetwork(inps,hids,outs)
 
 datasave={
     "model_state": nlpModel.state_dict(),
-    "output_size": inps,
+    "input_size": inps,
     "output_size": outs,
     "hidden_size": hids,
     "all_words": allWords,
