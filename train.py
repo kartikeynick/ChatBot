@@ -96,8 +96,8 @@ train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, 
 nlpModel= NeuralNetwork(inps,hids,outs)
 
 datasave={
-    "model_state":NeuralNetwork.state_dict(),
-    "outpue_size": inps,
+    "model_state": nlpModel.state_dict(),
+    "output_size": inps,
     "output_size": outs,
     "hidden_size": hids,
     "all_words": allWords,
@@ -105,6 +105,6 @@ datasave={
 }
 
 filef="data.pth"
-torch.save(filef)
+torch.save(datasave,filef)
 
 print(f' Completed the traied fata {filef}')
