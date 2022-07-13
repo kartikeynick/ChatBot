@@ -18,6 +18,7 @@ allWords = []  # empty list
 tags = []  # for tags
 xy = []  # later holds all words and tags
 
+print("I am here")
 for intent in intents['intents']:
     tag = intent['tag']  # key tag as in the json file
     tags.append(tag)  # then we will be appending it in out tag array and
@@ -26,8 +27,10 @@ for intent in intents['intents']:
         allWords.extend(tknize)  # append it into the all word array
         xy.append((tknize, tag))  # so it will know the pattern and the corresponding tag
 
+print("I am here 2")
 # Now excluding the punctuation characters, Later Implication: Removing all the stopwords later down the road if
 # needed, but for now this works
+
 
 ignoreWords = ['?', '!', '.', ',']  # Array of punctuation characters. We Will not be needing them for our BOW model
 allWords = [stem(w) for w in allWords if w not in ignoreWords]  # do Stemming
@@ -56,13 +59,14 @@ bTrain = np.array(bTrain)
 
 # PyTorch model and training
 
+
+
 class CDataset(Dataset):  # ChatDataset --> Dataset parameter from torch so it inherit the dataset
     def __int__(self):
         self.n_samples = len(aTrain) #store number of samples a train array
         self.adata = aTrain
         self.bdata = bTrain
 
-        # dataset[index]
     def __getitem__(self, index):
         return self.adata[index], self.bdata[index]
 
@@ -72,7 +76,6 @@ class CDataset(Dataset):  # ChatDataset --> Dataset parameter from torch so it i
 #hyperparameters
 batch_size=8
 
-print("I am here")
 dataset=CDataset()
 
 
