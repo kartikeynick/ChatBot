@@ -46,7 +46,7 @@ for (tknize, tag) in xy:
     # then append it into train array
     aTrain.append(bag)
     # numbers for our labels as in 0,1,2,....n
-    lable = tag.index(tag)
+    lable = tags.index(tag)
     bTrain.append(lable)  # CorssEntropyLoss that is why not doing 1 hot encoding
 
 # after this we have to convert it into numpy array
@@ -56,38 +56,61 @@ bTrain = np.array(bTrain)
 
 # PyTorch model and training
 
-class CDataset(Dataset):  # ChatDataset
+class CDataset(Dataset):  # ChatDataset --> Dataset parameter from torch so it inherit the dataset
     def __int__(self):
         self.n_samples = len(aTrain) #store number of samples a train array
         self.adata = aTrain
         self.bdata = bTrain
 
         # dataset[index]
-        def __getitem__(self, index): #
-            return self.adata[index], self.bdata[index]
+    def __getitem__(self, index):
+        return self.adata[index], self.bdata[index]
 
-        def __len__(self):
-            return self.n_samples
-
+    def __len__(self):
+        return self.n_samples #return self number of sammples
 
 #hyperparameters
 batch_size=8
+
+print("I am here")
 dataset=CDataset()
 
+
 inps= len(aTrain[0])# input size --> len of each BOG we creater --> it has the same len as the all word array
+
 hids=8 #hidden size
 outs= len(tags)#output size --> number of diff tags we have
-print(inps)
+#print(inps,len(allWords))
+#print(outs,tags)
+
+
 # create a data loader here
 # batch size=8 (lets)
 # number of workers =2 --> it is for multiprocessing so that it works faster
 
 
-train_loader=DataLoader(dataset=dataset, batch_size=8, shuffle=True , num_workers=0)
+train_loader=DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True , num_workers=2) #chatdataset
 
 
 # num_workers sometimes throws an error in windows so if that is the case just set it to 0
 # We can automatically iterate over it and can get a batch training
 
 # now let go for the training look for the Training.
-#model= NeuralNetwork(inps,hids,outs)
+
+'''
+model= NeuralNetwork(inps,hids,outs)
+
+datasave={
+    "model_state":NeuralNetwork.state_dict(),
+    "outpue_size": inps,
+    "output_size": outs,
+    "hidden_size": hids,
+    "all_words": allWords,
+    "tags": tags
+}
+
+filef="data.pth"
+torch.save(filef)
+
+print(f' Completed the traied fata {filef}')
+'''
