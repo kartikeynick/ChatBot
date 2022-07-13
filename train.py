@@ -107,4 +107,4 @@ datasave={
 filef="data.pth"
 torch.save(datasave,filef)
 
-print(f' Completed the traied fata {filef}')
+print(f' Completed the tried data and it is stored in {filef}')
