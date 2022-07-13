@@ -2,6 +2,8 @@ import json
 from nltk_down import tokenize, stem, bagOfWords
 import numpy as np
 
+from NLPModel import NeuralNetwork
+
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
@@ -29,10 +31,10 @@ for intent in intents['intents']:
 
 ignoreWords = ['?', '!', '.', ',']  # Array of punctuation characters. We Will not be needing them for our BOW model
 allWords = [stem(w) for w in allWords if w not in ignoreWords]  # do Stemming
-print(allWords)  # This will give a tokenized and stemmed word and removed the special characters
+#print(allWords)  # This will give a tokenized and stemmed word and removed the special characters
 allWords = sorted((set(allWords)))  # sort and remove all the duplicate words
 tags = sorted((set(tags)))  # removing and sort all the tag duplicates
-print(tags)
+#print(tags)
 
 aTrain = []  # bag of words
 bTrain = []  # associated number for each tags
@@ -70,14 +72,20 @@ class CDataset(Dataset):  # ChatDataset
 
 #hyperparameters
 batch_size=8;
+ds=CDataset()
 
-dataset=CDataset()
+inps= len(aTrain[0])# input size --> len of each BOG we creater --> it has the same len as the all word array
+hids=8 #hidden size
+outs= len(tags)#output size --> number of diff tags we have
+print(inps)
 # create a data loader here
 # batch size=8 (lets)
 # number of workers =2 --> it is for multiprocessing so that it works faster
-train_loader=DataLoader(dataset=CDataset, batch_size=8, shuffle=True , num_workers=2)
+
+
+train_loader=DataLoader(dataset=ds, batch_size=8, shuffle=True , num_workers=0)
 # num_workers sometimes throws an error in windows so if that is the case just set it to 0
 # We can automatically iterate over it and can get a batch training
 
 # now let go for the training look for the Training.
-
+model= NeuralNetwork(inps,hids,outs)

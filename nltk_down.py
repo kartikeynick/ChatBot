@@ -23,7 +23,7 @@ def bagOfWords(tokenizedSentence, all_words):  # tokenized sentence and all word
     '''
     # Now by using the list comprehension.
     tokenizedSentence = [stem(w) for w in tokenizedSentence]
-    print(tokenizedSentence)
+    #print(tokenizedSentence)
     bag = np.zeros(len(all_words), dtype=np.float32)
     for idx, w in enumerate(all_words):
         if w in tokenizedSentence:
