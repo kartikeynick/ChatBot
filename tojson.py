@@ -12,3 +12,5 @@ with open("C:/faq.csv","r") as f:#read the csv file from the system
 
 with open("FAQIntents.json","w") as f:#creating the file and dumpinf all the data in the dictionary into json file
     json.dump(data,f,indent=2)
+
+#this is a test comment by PURUKITTA
