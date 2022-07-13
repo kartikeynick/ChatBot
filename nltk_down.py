@@ -24,13 +24,13 @@ def bagOfWords(tokenizedSentence,all_words): #tokenized sentence and all words
         if w in tokenizedSentence:
             bag[idx]=1.0
     return bag
+'''S=['hello','how','are','you']
 
-#S=['hello','how','are','you']
-
-S=["organize", "organization","organizing"]
+#S=["organize", "organization","organizing"]
 words=['hi','hello','i','you','bye','thank','cool']
 bog=bagOfWords(S,words)
 print(bog)
+'''
 
 
 '''

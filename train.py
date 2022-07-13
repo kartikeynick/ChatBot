@@ -3,7 +3,7 @@ from nltk_down import tokenize, stem,bagOfWords
 import numpy as np
 
 import torch
-import  torch torch.nn as nn
+import  torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
 
@@ -13,7 +13,7 @@ from torch.utils.data import Dataset, DataLoader
 with open('intents.json', 'r') as f:
     intents=json.load(f)
 
-#print(i)
+#print(intents)
 
 allWords=[]# empty list
 tags=[]# for tags
