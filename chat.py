@@ -33,24 +33,23 @@ while True:
     s=tokenize(s)
     x=bagOfWords(s,allWords) # taking the tokenized sentence and all the words from trained dataset
     #then reshape this
-    x=x.reshape(1,x.shape[0])# 1 row
-    x=torch.from_numpy(x)
+    x=x.reshape(1,x.shape[0])# 1 row because we have only  1 sample
+    x=torch.from_numpy(x)#becase out big function returns a numpy array
 
     output=nlpModel(x)
-
-    print("s = ",s,"\n x = ",x," out = ",output)
     _,preciction = torch.max(output, dim=1)
     tag=tags[preciction.item()] #then find the tag corresponding to the predicted
 
+    print("s = ",s,"\nx = ",x,"\nout = ",output,"\nPrediction tag : ",tag)
     #now apply a Softmax here
     probability=torch.softmax(output,dim=1)
     p=probability[0][preciction.item()] #this will be the probability
 
     print(" probability : ",p)
 
-    if p.item()>0.02:
+    if p.item()>0.7:
         for i in intents['intents']:
-            if tag== i["tags"]:
+            if tag== i["tag"]:
                 rw=random.choice(i['responses']) # pick random replies from responses
                 print(f"{botName}: {rw}") # print the random
     else:
