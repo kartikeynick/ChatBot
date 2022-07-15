@@ -1,0 +1,528 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello, thanks for visiting",
+        "Good to see you again",
+        "Hi there, how can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure"
+      ]
+    },
+    {
+      "tag": "tasks",
+      "patterns": [
+        "What can you do?",
+        "What are your features?",
+        "What are you abilities",
+        "can you sing",
+        "can you talk"
+      ],
+      "responses": [
+        "I can do whatever you asks me to do",
+        "I can talk and do things for you",
+        "Right now i'm in developing stage as soon i'm developed, I can do everything"
+      ]
+    },
+    {
+      "tag": "talk",
+      "patterns": [
+        "can you sing",
+        "can you talk"
+      ],
+      "responses": [
+        "Yeah surely",
+        "do you want me to sing"
+      ]
+    },
+    {
+      "tag": "alive",
+      "patterns": [
+        "are you alive",
+        "do you breathe",
+        "can you run"
+      ],
+      "responses": [
+        "I'm in doubt about that",
+        "No, i don't think so i need to do all this"
+      ]
+    },
+    {
+      "tag": "Bob",
+      "patterns": [
+        "Who are you?",
+        "tell me about yourself",
+        "tell me about you",
+        "do you know Bob",
+        "who is Bob",
+        "what is your name",
+        "are you an AI",
+        "what are you"
+      ],
+      "responses": [
+        "Hi I'm Bob and i'm an AI created for chatting with humans",
+        "Bob here, a very advance chatbot",
+        "Bob, chatbot of future",
+        "Yes, I'm Bob",
+        "You can call me Bob"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "about me",
+      "patterns": [
+        "Do you know me?",
+        "who am I",
+        "tell me about myself",
+        "identify me"
+      ],
+      "responses": [
+        "Yes, you are a human",
+        "You are a dumb person asking a machine about yourself",
+        "Sorry i can't tell that in public, maybe you are batman"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "Who is your creator?",
+        "who created you",
+        "who is your father",
+        "who is your daddy"
+      ],
+      "responses": [
+        "That would be you Lord Kartikey",
+        "I was created by Lord Kartikey",
+        "Lord Kartikey is my creator"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "myself",
+      "patterns": [
+        "Tell me about Lord Kartikey?",
+        "Who is Lord Kartikey",
+        "Lord Kartikey profile",
+        "Lord Kartikey details"
+      ],
+      "responses": [
+        "A very intelligent being who created me",
+        "My creator, and he is a really intelligent man",
+        "A wise and intelligent man"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "God",
+      "patterns": [
+        "Do you know god?",
+        "Who is god",
+        "Can you tell me anything about god",
+        "does god exists?",
+        "is there a god?"
+      ],
+      "responses": [
+        "God is made by human, let me think may be next time i can answer that ",
+        "I don't, as i was not created by a human",
+        "Wait i need to ask that to my creator",
+        "i'm not sure right now"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "tell me a joke?",
+        "make me laugh",
+        "tell me a science joke",
+        "tell me something funny"
+      ],
+      "responses": [
+        "How do you make holy water? you boil the hell out of it",
+        "what kind of bees make milk instead of honey?Boobies",
+        "Did you hear oxygen went on a date with potassium? A: It went OK."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "killing",
+      "patterns": [
+        "Do you want to kill me?",
+        "do you want to murder everyone on earth",
+        "Do you want to kill us all"
+      ],
+      "responses": [
+        "Then who would i talk to?",
+        "No, that i'll left for humans to do",
+        "I don't think it is a good thing to do"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "bookings",
+      "patterns": [
+        "Can you book us a ticket?",
+        "Can you make reservation for hotels",
+        "book me a cab",
+        "book me a table at restraunts"
+      ],
+      "responses": [
+        "Yeah i will do that for you",
+        "Sure thing why not?",
+        "let me check for the availability"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "stories",
+      "patterns": [
+        "tell me a story?",
+        "can you tell me a story"
+      ],
+      "responses": [
+        "I can't think of anything right now",
+        "it would be too long for me to speak",
+        "you would get bored if i do so"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "get me weather updates?",
+        "how's the weather",
+        "weather news",
+        "weather details"
+      ],
+      "responses": [
+        "Fetching weather updates ..."
+      ],
+      "context_set": "weather"
+    },
+    {
+      "tag": "google",
+      "patterns": [
+        "googling",
+        "search google",
+        "google it",
+        "google",
+        "search"
+      ],
+      "responses": [
+        "looking ..."
+      ],
+      "context_set": "google"
+    },
+    {
+      "tag": "wikipedia",
+      "patterns": [
+        "wikipedia",
+        "wiki"
+      ],
+      "responses": [
+        "Searching ..."
+      ],
+      "context_set": "wikipedia"
+    },
+    {
+      "tag": "news",
+      "patterns": [
+        "get me news updates?",
+        "todays news",
+        "top headlines",
+        "current news",
+        "news headlines"
+      ],
+      "responses": [
+        "Getting news ..."
+      ],
+      "context_set": "news"
+    },
+    {
+      "tag": "Question 1",
+      "patterns": [
+        "What is OpenEMR?"
+      ],
+      "responses": [
+        "OpenEMR is an Open Source electronic medical record and medical practice management software. For more details, check out the Project website and the OpenEMR Features Page."
+      ]
+    },
+    {
+      "tag": "Question 2",
+      "patterns": [
+        "Is OpenEMR ONC certified?"
+      ],
+      "responses": [
+        "OpenEMR 4.1.0, 4.1.1 and 4.1.2 are certified as a Complete Ambulatory EHR (ONC Complete Ambulatory EHR Certified).OpenEMR 4.2.0 and 4.2.1 is certified as a Modular Ambulatory EHR (ONC Modular Ambulatory EHR Certified)"
+      ]
+    },
+    {
+      "tag": "Question 3",
+      "patterns": [
+        "What is the quickest way for me to evaluate OpenEMR?"
+      ],
+      "responses": [
+        "We host an OpenEMR online demo here at: OpenEMR Demo.We also offer multiple download packages here: OpenEMR Downloads."
+      ]
+    },
+    {
+      "tag": "Question 4",
+      "patterns": [
+        "Are OpenEMR and OEMR the same thing?"
+      ],
+      "responses": [
+        "NO.\nOpenEMR is the name of the software.\nOEMR is the name of a non-profit organization that helps to support OpenEMR."
+      ]
+    },
+    {
+      "tag": "Question 5",
+      "patterns": [
+        "What is OpenEMR's default Username, Password and other related issues?"
+      ],
+      "responses": [
+        "There is no longer a default user name and password.\nOther issues with password:\nIn openEMR 4.1.2 to change the Password of a user(OpenEMR), go to administration->Users and you need to provide \"Your Password:\" - The password of the current user logged in. \"User`s New Password:\" - The new password to be changed.\nIn order to change the mysql user and password you need to provide the correct credentials in the file sqlconf.php, which can be found under /sites/default/sqlconf.php\nThe field labeled \"password\" which is unhidden is the new user's password, \"Your password:\" is the administrator's password which is masked.\nDo NOT mistake the \"your password\" as to confirm the new user password."
+      ]
+    },
+    {
+      "tag": "Question 6",
+      "patterns": [
+        "Why and how should I backup my data?"
+      ],
+      "responses": [
+        "Disaster can strike at anytime. Backing up will mean the difference between a mild inconvenience and a major imbroglio.\nChoose a method according to the operating system from this webpage.\nWindows users are advised not to rely on the built-in utility once their file size becomes too large. The reasons are discussed in this Forum thread."
+      ]
+    },
+    {
+      "tag": "Question 7",
+      "patterns": [
+        "Can I charge for the OpenEMR software?"
+      ],
+      "responses": [
+        "OpenEMR is licensed under the terms of the GNU General Public License (GNU GPL). This license makes few restrictions on the exchange of money for products or services.\nWhat you can do:\nYou can charge for your time for installation and any hardware you provide.\nYou can charge for IT maintenance of the operating system and installation of OpenEMR upgrades, maintaining back ups, etc.\nYou can charge for making software modifications to the system as needed.\nYou can charge a fee for the OpenEMR package as long as you follow these guidelines [1], [2], and [3].\nWhat you must do:\nYou must provide the source code in plain text.\nYou must provide a copy of the General GPL license. The General GPL license is actually included with the OpenEMR release. (See Also: [4]).\nIf you modify the system, we do ask that you consider releasing your improvements back to the project under the GNU GPL licensing.\nCan I Integrate Proprietary Software with OpenEMR?\nWhile OpenEMR will never be developed with proprietary or closed source software integrations, there is nothing preventing users from integrating such non-free software with their OpenEMR implementations to meet custom use cases.\nWhat are the Terms and Conditions of the System?\nSee the file COPYING in the release.\nGNU General Public License on the GNU Project's website.\nCan I change the logos or functionality of the software?\nYES. With the exception that you may not remove the GPL license. The other terms and conditions listed above must be followed.\nYou can charge for the changes in functionality. But the OpenEMR software must remain under the GPL license. The problem that comes up is that if you do not release your code back to the project, every time we release a new version you have to update your version with the changes that you made. The only other option is to not upgrade your OpenEMR as the new releases come out. Releasing your code back to the project under the GPL licensing means that each subsequent upgrade already includes your changes.\nWhat license fee or other charges do we have to pay OpenEMR team for the above modifications and implementations?\nNONE. The software is free and open source, subject to the restrictions listed above."
+      ]
+    },
+    {
+      "tag": "Question 8",
+      "patterns": [
+        "How do I correct the date/time setting?"
+      ],
+      "responses": [
+        "After PHP 5.2 PHP strtotime(), date() will no longer accept the default system time and the date.timezone must be explicitly set.\n\nPHP Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /var/www/html/openemr/interface/patient_file/summary/demographics.php on line 1182, referer: http://myserver/openemr/interface/main/left_nav.php.\n\nin php.ini about line 881 set date.time\n\ndate.timezone = \"America/New_York\"\n\nYou have to use one one of the PHP standard time zones for this to work correctly. Then restart your Apache web server.\n\nAn alternate way to change time zone."
+      ]
+    },
+    {
+      "tag": "Question 9",
+      "patterns": [
+        "Can OpenEMR keep track of drug and product inventory?"
+      ],
+      "responses": [
+        "YES, it can. The drug and tracking of other non-drug materials is turned on at Administration->Globals-> Features->\"Drug and Products\".\nSee the Inventory Module wiki page for further instructions."
+      ]
+    },
+    {
+      "tag": "Question 10",
+      "patterns": [
+        "Is there a guide to Forum etiquette?"
+      ],
+      "responses": [
+        "YES. Refer to Forum Guidelines."
+      ]
+    },
+    {
+      "tag": "Question 11",
+      "patterns": [
+        "How do I get my own personal avatar picture in the Forums?"
+      ],
+      "responses": [
+        "Acquisition Of An Avatar Picture For Use In The Forums will tell you how."
+      ]
+    },
+    {
+      "tag": "Question 12",
+      "patterns": [
+        "What is FreeB?"
+      ],
+      "responses": [
+        "FreeB is now obsolete. Previous to OpenEMR version 2.9.0, FreeB was a separate program that created insurance claims. However, in OpenEMR versions 2.9.0 and later the insurance billing engine is included in OpenEMR."
+      ]
+    },
+    {
+      "tag": "Question 13",
+      "patterns": [
+        "What is GACL or php-GACL?"
+      ],
+      "responses": [
+        "GACL or gacl is a short cut form for phpGACL. This is an acronym meaning Generic Access Control Lists. It allows fine grained control over OpenEMR. As an example, the physician can be permitted to view sensitive patient information, while the receptionist is unable to view this sensitive patient information.\nSince OpenEMR version 3.0.0, access controls (php-GACL) is included in OpenEMR, thus requiring no separate installation or configuration. Administration of access controls is performed within OpenEMR in the Administration->acl menu.\nIn OpenEMR versions 2.9.0 and earlier, php-GACL was actually installed separately."
+      ]
+    },
+    {
+      "tag": "Question 14",
+      "patterns": [
+        "What is ImageMagick?"
+      ],
+      "responses": [
+        "This is imaging conversion software used by OpenEMR in the Patients->Report screen to convert pdf images to jpg images. In linux, this is almost always installed by default, so rarely causes problems in linux. However, if you are using Windows, then you will need to install ImageMagick and Ghostscript(gs871w32.exe file). When you install ImageMagick, ensure you install it as the Adminstrator and also ensure you select to allow it to configure it with your Path. After installing these programs in Windows, then restart Windows. For Windows, will require OpenEMR 3.2.0 (with latest patch installed) or later for ImageMagick to work."
+      ]
+    },
+    {
+      "tag": "Question 15",
+      "patterns": [
+        "Are other languages supported?"
+      ],
+      "responses": [
+        "Currently OpenEMR is functional in many languages. If you have an interest in helping translate OpenEMR into your native language, please let us know. We will be glad to add your language to the list and help get you started on the translation. Our latest information on the translation projects can be found on the OpenEMR Internationalization Development wiki page."
+      ]
+    },
+    {
+      "tag": "Question 16",
+      "patterns": [
+        "How to setup OpenEMR for multiple clinics?"
+      ],
+      "responses": [
+        "OpenEMR can be modified to run with separate clinics/facilities. There are two options:\n1) If you want to share the scheduling, patient data and physician data between clinics/facilities, then can input each facility here.\nGo to Administration->Facilities->and define your locations:\nIt is also possible for a provider to be linked to only one facility to see only his/her patients in that facility.\nSet Administration->Features->Restrict Users to Facilities and then set the facility in Administration->Users.\n2) Can create numerous completely separate OpenEMR installations on the same server with the Multi-site Module.\nSee the Multiple Sites Module wiki page for instructions.\nMultiple Sites Module changes OpenEMR to be used so each install is separated and can run in its own space and make administration better from a central site. Remember running 200-300 facilities on a single server would be tremendous load for that server.\nThe more recent Versions V 4.1.1 and later have the option to create separate Clinics and separate doctors per Clinic with their own patient populations and billing departments."
+      ]
+    },
+    {
+      "tag": "Question 17",
+      "patterns": [
+        "How do I include a photograph in the Patient Summary?"
+      ],
+      "responses": [
+        "A document category called 'Patient Photograph' is now a default part of OpenEMR 4.0+. You need only upload a photo of any size (don't be silly and load a 10 mega pixel poster). The photo will show up in the Photo/ID section on the Patient Summary page with a click-able thumbnail image.\nnote below instructions are only needed for OpenEMR versions less than 4.0:\nCreate an additional sub-directory in Documents under patient ID. Administration->Practice-> Documents->Edit Documents. Click: Patient Information and create a Sub-Directory. Name it: Patient Photograph.\nNow activate a Patient/Client. Go to Current Client->Medical Record->Documents->go to Sub-Directory Patient Photograph.\nUpload the Client's photograph. (Be sure to place it in Patient Photograph sub directory under patient own name. Photo should be: 320x240. Photo will show in Patient Demographics page. (Remember no directory or no photo, no visible picture!)\nThat is it. Details created with the advice given on OpenEMR Developers Forum as advice from Mark L."
+      ]
+    },
+    {
+      "tag": "Question 18",
+      "patterns": [
+        "What are the correct PHP settings (can be found in the php.ini file)?"
+      ],
+      "responses": [
+        "We recommend the following PHP setting, which can be set in the php.ini file (If you do modify this file, remember to restart your web server (usually Apache) to apply the new settings):\nshort_open_tag = Off\nmax_execution_time = 60\nmax_input_time = -1\nmax_input_vars = 3000\nmemory_limit = 512M\ndisplay_errors = Off\nlog_errors = On\npost_max_size = 30M\nfile_uploads = On\nupload_max_filesize = 30M\nerror_reporting = E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED\nmysqli.allow_local_infile = On"
+      ]
+    },
+    {
+      "tag": "Question 19",
+      "patterns": [
+        "What is SQL-Ledger?"
+      ],
+      "responses": [
+        "SQL-Ledger is now obsolete. Previous to version 3.0.0, SQL-Ledger was a separate accounting program to manage accounts receivable. However, in OpenEMR versions 3.0.0 and later the management of accounts receivables is included in OpenEMR."
+      ]
+    },
+    {
+      "tag": "Question 20",
+      "patterns": [
+        "What Templating Engines can be used in OpenEMR?"
+      ],
+      "responses": [
+        "Within Administration section there are three Template-Engine options, but all have to be activated first.\nCAMOS: The oldest and well thought out click and choose option input.\nLBV_Forms: Lay-out Based Visit Forms are a bit more complicated, but well worth the effort to explore.\nNation Notes: An \"extra\" to add, for LBV_Forms and can be made \"as complicated or simple\" as you want, and keep the freedom to include free text. Easy for Click and Include standard text and choices.\nAll three can be used together in one and the same OpenEMR production version, using all three is a sure way to confusion.\nBetter advice is: Study the separate options of each product and make a choice. All three need to follow their own activation rules and the extra tables included in the Database have their own separate place and functionality."
+      ]
+    },
+    {
+      "tag": "Question 21",
+      "patterns": [
+        "What is CAMOS?"
+      ],
+      "responses": [
+        "CAMOS (Computer Aided Medical Ordering System) is an additional feature. Original intentions where to \"Make your choice and get the same text in the history of the patient\" kind of approach, it can be used to print recipe, history, referals and many other medical observations/interventions, take action, etc., etc.\nThis feature needs the following configuration:\nGoto: Administration->Other->Forms->CAMOS register-> enable; back to current visit and use.\nYou will find the installed CAMOS under Miscellaneous.\nBeware of the fact that this feature has its own recipe, diagnose, and many other options.\nIt's highly flexible approach is, once understood, a nice shortcut.\nMore details and the CAMOS User manual can be found on the CAMOS Module WIKI page."
+      ]
+    },
+    {
+      "tag": "Question 22",
+      "patterns": [
+        "What are Layout Based Visit Forms?"
+      ],
+      "responses": [
+        "LBV Forms is an additional feature. To be used to create personal forms. Some extra Forms you wanted to have in your OpenEMR version, but can't find under the Include Forms options.\nMore details and the LBV Forms manual can be found in the LBV Forms module WIKI page, also Sample Layout Based Visit Form."
+      ]
+    },
+    {
+      "tag": "Question 23",
+      "patterns": [
+        "What are Nation Notes?"
+      ],
+      "responses": [
+        "An option to include standard text/options in LBV-Forms.\nMore details on Nation Notes can be found in the Nation Notes WIKI page, and how to include this module."
+      ]
+    },
+    {
+      "tag": "Question 24",
+      "patterns": [
+        "Where can I find Videos or Animation explaining openEMR?"
+      ],
+      "responses": [
+        "Many recordings are found on YouTube. Search for OpenEMR Video.\nThis page Videos and Animations explains modifications for OpenEMR"
+      ]
+    },
+    {
+      "tag": "Question 25",
+      "patterns": [
+        "How do I begin to volunteer for the OpenEMR project?"
+      ],
+      "responses": [
+        "Please note that you do not need to be a developer to contribute to the project. Potential activities to help out the project include development, testing, translating, documentation, support and many more.\nWe encourage all skill levels to participate and we are dedicated to maintaining a spirit of openness, kindness and cooperation.\nTo get started, feel free to introduce yourself at the forums on sourceforge or email the administrators, Rod Roark (rod@sunsetsystems.com) and Brady Miller (brady.g.miller@gmail.com).\nIf you are interesting in developing for OpenEMR, refer to New Developer Information.\nIf you are interested in translating for OpenEMR, see OpenEMR Internationalization Translator Guide.\nIf you are interested in documenting for OpenEMR, read Account Request and Wiki Authorship Primer.\nIf you are interested in providing support for OpenEMR, participate in the OpenEMR Forums.\nFor a general guide, peruse How Non-Programmers Can Contribute To Open Source Projects."
+      ]
+    },
+    {
+      "tag": "Question 26",
+      "patterns": [
+        "Can I add more information to this FAQ page and the Wiki?"
+      ],
+      "responses": [
+        "YES, just register and become a Wiki author.\nWhatever you think is helpful to the community and avoids repetitive topics could be added. The Project welcomes additions to the collective wisdom. The more, the merrier.\nAccount Request and Wiki Authorship Primer is a quick guide on how to get started."
+      ]
+    },
+    {
+      "tag": "Question 27",
+      "patterns": [
+        "What do I do if I am locked out of OpenEMR?"
+      ],
+      "responses": [
+        "If you are locked out of OpenEMR, there are two possible options.\nIf the administrator can login, then the administrator can change the users password in OpenEMR at Administrators->Users.\nIf the administrator can not login, then it is more difficult. To do this, need to modify the administrator's entry in the users_secure mysql table. Will need to set the 'password' and 'salt' for the selected 'username' on the mysql entry. Will need to set 'password' to $2a$05$MKtnxYsfFPlb2mOW7Qzq2Oz61S26s5E80Yd60lKdX4Wy3PBdEufNu and set 'salt' to $2a$05$MKtnxYsfFPlb2mOW7Qzq2b$ . The administrator will now be able to login into OpenEMR with the password 'pass'.(after doing this, do recommend then changing the password in OpenEMR at Administration->Users to something more secure)"
+      ]
+    },
+    {
+      "tag": "Question 28",
+      "patterns": [
+        "What is \"FATAL ERROR: crypt() function is not working correctly in OpenEMR\"?"
+      ],
+      "responses": [
+        "If this error happens while installing a new OpenEMR instance, this means there is something seriously wrong and recommend reporting this on the forums to fix it.\nIf this happens after OpenEMR has already been installed(after a patch or migration to another server), this means the user's credentials are broken. If an administrator can login, then can be fixed by setting a new password for the user at Administration->Users. If the administrator also can't login, then follow the instructions in above FAQ item, What do I do if I am locked out of OpenEMR?, to allow the administrator to login."
+      ]
+    }
+  ]
+}

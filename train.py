@@ -5,10 +5,11 @@ from NLPModel import NeuralNetwork
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-
+import pandas as pd
 
 # to load the json file
-with open('intents.json', 'r') as f:
+#with open('intents.json', 'r') as f:
+with open('newIntent.json', 'r') as f:
     intents = json.load(f)
 
 # print(intents)
@@ -62,30 +63,29 @@ bTrain = np.array(bTrain)
 
 # PyTorch model and training
 
+
 class CDataset(Dataset):  # ChatDataset --> Dataset parameter from torch so it inherit the dataset
-    def __int__(self):
-        self.n_samples = len(aTrain)  # store number of samples a train array
+    def __init__(self):
+        self.n_samples = len(aTrain) # store number of samples a train array
         self.AData = aTrain
         self.BData = bTrain
 
     # support the indexinf so the dataset[i] can be used to get the ith sample
     def __getitem__(self, i):
-        return self.aTrain[i], self.bTrain[i]
+        return self.AData[i], self.BData[i]
 
     def __len__(self):
-        return len(aTrain)  # return self number of sammples
+        return len(aTrain) # return self number of sammples
 
 
 # hyperparameters
-batch_size = 8
+batch_size = 12
 chatds = CDataset()
 inps = len(aTrain[0])  # input size --> len of each BOG we creater --> it has the same len as the all word array
-hids = 8  # hidden size
+hids = 12  # hidden size
 outs = len(tags)  # output size --> number of diff tags we have
 # print(inps,len(allWords))
 # print(outs,tags)
-
-
 # create a data loader here
 # batch size=8 (lets)
 # number of workers =2 --> it is for multiprocessing so that it works faster
@@ -96,8 +96,7 @@ train_loader = DataLoader(dataset=chatds, batch_size=batch_size, shuffle=True, n
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-nlpModel= NeuralNetwork(inps,hids,outs)
-'''.to(device)
+nlpModel= NeuralNetwork(inps,hids,outs).to(device)
 
 # Loss and optimizer
 lr=0.001#learning rat
@@ -112,7 +111,7 @@ for epoch in range(num_epochs):
         words = words.to(device)
         labels = labels.to(dtype=torch.long).to(device)
 
-        # Forward pass
+        # Forward the pass
         outputs = nlpModel(words)
         # if y would be one-hot, we must apply
         # labels = torch.max(labels, 1)[1]
@@ -128,7 +127,7 @@ for epoch in range(num_epochs):
 
 print(f'final loss: {loss.item():.4f}')
 
-'''
+# Saving the data
 datasave={
     "model_state": nlpModel.state_dict(),
     "input_size": inps,
@@ -138,7 +137,8 @@ datasave={
     "tags": tags
 }
 
+# riting the data into a file
 filef="data.pth"
 torch.save(datasave,filef)
 
-print(f' Completed the tried data and it is stored in {filef}')
+print(f'\nCompleted the tried data and it is stored in {filef}')

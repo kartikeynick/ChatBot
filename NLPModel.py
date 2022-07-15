@@ -7,6 +7,8 @@ class NeuralNetwork(nn.Module):
         # SoftMax and get probability of all the classes
 
         super(NeuralNetwork, self).__init__()  # to call the self
+
+
         self.layer1 = nn.Linear(input_size, hidden_size)
         self.layer2 = nn.Linear(hidden_size, hidden_size)
         self.layer3 = nn.Linear(hidden_size, num_Classes)

@@ -6,7 +6,8 @@ from NLPModel import NeuralNetwork
 from nltk_down import bagOfWords, tokenize, stem
 
 # opening the json file here
-with open('intents.json', 'r') as f:
+#with open('intents.json', 'r') as f:
+with open('newIntent.json', 'r') as f:
     intents = json.load(f)
 
 file = "data.pth"
@@ -37,20 +38,20 @@ while True:
     x=torch.from_numpy(x)#becase out big function returns a numpy array
 
     output=nlpModel(x)
-    _,preciction = torch.max(output, dim=1)
-    tag=tags[preciction.item()] #then find the tag corresponding to the predicted
+    _,prediction = torch.max(output, dim=1)
+    tag=tags[prediction.item()] #then find the tag corresponding to the predicted
 
-    print("s = ",s,"\nx = ",x,"\nout = ",output,"\nPrediction tag : ",tag)
+    #print("s = ",s,"\nx = ",x,"\nout = ",output,"\nPrediction tag : ",tag)
     #now apply a Softmax here
     probability=torch.softmax(output,dim=1)
-    p=probability[0][preciction.item()] #this will be the probability
+    p=probability[0][prediction.item()] #this will be the probability
 
-    print(" probability : ",p)
+    #print(" probability : ",p)
 
-    if p.item()>0.7:
+    if p.item()>0.5:
         for i in intents['intents']:
             if tag== i["tag"]:
                 rw=random.choice(i['responses']) # pick random replies from responses
                 print(f"{botName}: {rw}") # print the random
     else:
-        print(f"{botName}: Dfaq you are you saying? Say it again nigg!")
+        print(f"{botName}: I dont understand, can you say it in other words please? Thank you.")
