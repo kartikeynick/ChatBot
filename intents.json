@@ -36,17 +36,17 @@
 	},
 	{"tag": "creator",
          "patterns": ["Who is your creator?", "who created you", "who is your father","who is your daddy" ],
-         "responses": ["That would be you Mr. Vishal","I was created by Mr. Vishal", "Mr. vishal is my creator"],
+         "responses": ["That would be you Lord Kartikey","I was created by Lord Kartikey", "Lord Kartikey is my creator"],
 	 "context_set": ""
 	},
         {"tag": "myself",
-         "patterns": ["Tell me about Mr. Vishal?", "Who is Mr. Vishal", "Mr. vishal profile", "Mr. Vishal details" ],
+         "patterns": ["Tell me about Lord Kartikey?", "Who is Lord Kartikey", "Lord Kartikey profile", "Lord Kartikey details" ],
          "responses": ["A very intelligent being who created me","My creator, and he is a really intelligent man", "A wise and intelligent man"],
 	 "context_set": ""
 	},
         {"tag": "God",
          "patterns": ["Do you know god?", "Who is god", "Can you tell me anything about god","does god exists?","is there a god?"],
-         "responses": ["god hunnnnn, let me think may be next time i can answer that ","I don't, as i was not created by a human", "Wait i need to ask that to my creator","i'm not sure right now"],
+         "responses": ["God is made by human, let me think may be next time i can answer that ","I don't, as i was not created by a human", "Wait i need to ask that to my creator","i'm not sure right now"],
 	 "context_set": ""
 	},
         {"tag": "joke",
