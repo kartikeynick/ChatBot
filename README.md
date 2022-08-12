@@ -14,7 +14,8 @@ pip install nltk torch torchvision Flask
 
 Then install the nltk package by
 
-```bashpython
+```bash
+python
 import nltk
 nltk.download('punkt')
 exit()
@@ -44,8 +45,10 @@ To fire up the front end and to chat with Bob, run this command.
 python webApp.py
 ```
 
-Now it should show a link for the local host in the terminal, by "Running on (link)" click on the link and it will take you to the browser window. Now you should be able to see a tiny chat icon in lower right corner of your browser window, if you click on it, it should show you the chat window where you can chat with Bob.
+Now it should show a link for the local host in the terminal, by "Running on (link)" click on the link or copy paste the link in your browser and it will take you to the browser window. Now you should be able to see a tiny chat icon in lower right corner of your browser window, if you click on it, it should show you the chat window where you can chat with Bob.
 
 Enjoy. :)
 
 PS: To personalize the experience with Bob the Bot, you just have to make changes in newIntent.json file
+
+
