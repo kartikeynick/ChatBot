@@ -25,12 +25,10 @@ nlpModel.load_state_dict(model_state)
 nlpModel.eval()
 
 botName = "Bob"
-print("Hey my name is Bob!, type exit to quit")
 
-while True:
-    s= input('User : ') # the raw sentence
-    if s=='exit':
-        break
+
+def reply(s):
+
     s=tokenize(s)
     x=bagOfWords(s,allWords) # taking the tokenized sentence and all the words from trained dataset
     #then reshape this
@@ -52,6 +50,21 @@ while True:
         for i in intents['intents']:
             if tag== i["tag"]:
                 rw=random.choice(i['responses']) # pick random replies from responses
-                print(f"{botName}: {rw}") # print the random
+                #print(f"{botName}: {rw}") # print the random
+                return rw
     else:
-        print(f"{botName}: I dont understand, can you say it in other words please? Thank you.")
+        return "I dont understand."
+        # print(f"{botName}: I dont understand, can you say it in other words please? Thank you.")
+
+
+if __name__=="__main__":
+    print("Hey my name is Bob!, type exit to quit")
+    while True:
+        #sentence input
+        s= input('User : ') # the raw sentence
+        if s=='exit':
+            break
+        #reply getting from the function
+        r=reply(s)
+        print(r)
+
