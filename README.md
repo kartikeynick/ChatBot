@@ -1,4 +1,4 @@
-# ChatBot Bob
+# Bob the Bot (Chat)
 
 A NLP Chatbot which can be incorporated into a website for seamless interaction with the user.
 
