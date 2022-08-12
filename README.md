@@ -1,6 +1,6 @@
-# ChatBot
+# Bob the Bot(Chat)
 
-A NLP Chatbot which can be encorporated into a websight for seemless interaction with the user.
+A NLP Chatbot which can be incorporated into a website for seamless interaction with the user.
 
 # Installation
 
@@ -34,7 +34,6 @@ After that, you can try and check if the training has been done correctly by run
 python chat.py
 ```
 
-
 If you can chat with Bob in your terminal now then it seems that all these steps have been done correctly. Now moving forward with the front end 
 
 # FrontEnd
@@ -49,4 +48,6 @@ You should see your browser window with a tiny chat icon in lower right corner, 
 
 Enjoy. :)
 
-PS: To personalise the experience with Bob the Bot, you just have to make changes in newIntent.json file
+PS: To personalize the experience with Bob the Bot, you just have to make changes in newIntent.json file
+
+
