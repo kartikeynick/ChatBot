@@ -50,9 +50,11 @@ def reply(s):
         for i in intents['intents']:
             if tag== i["tag"]:
                 rw=random.choice(i['responses']) # pick random replies from responses
-                print(f"{botName}: {rw}") # print the random
+                #print(f"{botName}: {rw}") # print the random
+                return rw
     else:
-        print(f"{botName}: I dont understand, can you say it in other words please? Thank you.")
+        return "I dont understand."
+        # print(f"{botName}: I dont understand, can you say it in other words please? Thank you.")
 
 
 if __name__=="__main__":
@@ -64,4 +66,5 @@ if __name__=="__main__":
             break
         #reply getting from the function
         r=reply(s)
+        print(r)
 

@@ -6,7 +6,6 @@ wApp = Flask(__name__)
 
 
 # now we define 2 route to render
-
 # also decorate it
 @wApp.get("/")#route("/", methods=['GET'])
 def index_get():
