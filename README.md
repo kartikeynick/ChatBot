@@ -12,7 +12,7 @@ Install all the dependencies by
 pip install nltk torch torchvision Flask
 ```
 
-Then install the nltk packahe by:
+Then install the nltk packahe by
 
 ```bashpython
 import nltk
